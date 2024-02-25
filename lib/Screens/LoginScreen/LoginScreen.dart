@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:greenwormsadminpanel/Screens/HomeScreen/Components/HMTcard.dart';
 import 'package:greenwormsadminpanel/Screens/LoginScreen/Controller.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:sizer/sizer.dart';
@@ -21,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 33.6.h,
               alignment: Alignment.bottomCenter,
-              child: Image.asset("assets/images/logo.png"),
+              child: Image.asset("assets/logo.png"),
             ),
             SizedBox(
               height: 8.h,
@@ -99,16 +101,17 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: () {
-                  if (authCtrl.emailController.text.isEmpty) {
-                    Fluttertoast.showToast(msg: "Please enter mail id");
-                    return;
-                  } else if (authCtrl.passwordController.text.isEmpty) {
-                    Fluttertoast.showToast(msg: "Please enter your password");
-                    return;
-                  } else {
-                    authCtrl.loginSend();
-                  }
+                  // if (authCtrl.emailController.text.isEmpty) {
+                  //   Fluttertoast.showToast(msg: "Please enter mail id");
+                  //   return;
+                  // } else if (authCtrl.passwordController.text.isEmpty) {
+                  //   Fluttertoast.showToast(msg: "Please enter your password");
+                  //   return;
+                  // } else {
+                  //   authCtrl.loginSend();
+                  // }
                   // login button click
+                  Get.to(()=>HMTCard());
                 },
                 child: Container(
                   width: 84.2.w,
