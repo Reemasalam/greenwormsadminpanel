@@ -10,6 +10,9 @@ import 'package:greenwormsadminpanel/Screens/HomeScreen/HomeScreen.dart';
 
 
 import 'package:greenwormsadminpanel/Screens/LoginScreen/Controller.dart';
+import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupCreateScreen.dart';
+import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupListScreen.dart';
+import 'package:greenwormsadminpanel/Screens/WardScreen/InputwardCreateScreen.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:sizer/sizer.dart';
 
@@ -104,17 +107,17 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: () {
-                  // if (authCtrl.emailController.text.isEmpty) {
-                  //   Fluttertoast.showToast(msg: "Please enter mail id");
-                  //   return;
-                  // } else if (authCtrl.passwordController.text.isEmpty) {
-                  //   Fluttertoast.showToast(msg: "Please enter your password");
-                  //   return;
-                  // } else {
-                  //   authCtrl.loginSend();
+                   //if (authCtrl.emailController.text.isEmpty) {
+                     //Fluttertoast.showToast(msg: "Please enter mail id");
+                   //  return;
+                 //} else if (authCtrl.passwordController.text.isEmpty) {
+                  // Fluttertoast.showToast(msg: "Please enter your password");
+                    //return;
+                   //} else {
+                     //authCtrl.loginSend();
                   // }
                   // login button click
-                  Get.to(()=>HomeScreen());
+                  Get.to(PickupListScreen());
                 },
                 child: Container(
                   width: 84.2.w,
