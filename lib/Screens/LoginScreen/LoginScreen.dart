@@ -114,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                      //authCtrl.loginSend();
                   // }
                   // login button click
-                  Get.to(PickupListScreen());
+                  Get.to(PickupCreateScreen());
                 },
                 child: Container(
                   width: 84.2.w,

@@ -70,12 +70,12 @@ class InputwardCreateScreen extends StatelessWidget {
               _textfield('Houses Non-Cooperated'),
              SizedBox(height:2.49.h),
              InkWell(
-              //onTap: () {
-                //Navigator.push(
-                  //context,
-                 // MaterialPageRoute(builder: (context) => InputwardListScreen(),),
-               // );
-             // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                 MaterialPageRoute(builder: (context) => InputwardListScreen(),),
+               );
+             },
              child: Container(
                 alignment: Alignment.center,
                 height: 4.94.h,
