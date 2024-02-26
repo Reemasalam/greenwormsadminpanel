@@ -5,7 +5,10 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:greenwormsadminpanel/Screens/HomeScreen/Components/HMTcard.dart';
+
+import 'package:greenwormsadminpanel/Screens/HomeScreen/HomeScreen.dart';
+
+
 import 'package:greenwormsadminpanel/Screens/LoginScreen/Controller.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:sizer/sizer.dart';
@@ -111,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                   //   authCtrl.loginSend();
                   // }
                   // login button click
-                  Get.to(()=>HMTCard());
+                  Get.to(()=>HomeScreen());
                 },
                 child: Container(
                   width: 84.2.w,

@@ -1,20 +1,21 @@
-import 'package:flutter/material.dart';
+import  'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-class HMTCard extends StatelessWidget {
-  const HMTCard({super.key});
+class HMTPrimarycard extends StatelessWidget {
+  const HMTPrimarycard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [
-        Container(
+  children: [
+
+     Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(3.94.w),
-            image: DecorationImage(
-              image: AssetImage('assets/image/pathcopy.png'),
-              fit: BoxFit.cover,
-            ),
+            // image: DecorationImage(
+            //   image: AssetImage('assets/image/pathcopy.png'),
+            //   fit: BoxFit.cover,
+            // ),
             color: Colors.white,
           ),
           height: 14.11.h,
@@ -23,15 +24,15 @@ class HMTCard extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+             Container(
               margin: EdgeInsets.only(top: 2.55.h, left: 4.73.w),
               child: Image.asset(
-                'assets/image/card.png',
+                'assets/card.png',
                 width: 10.38.w,
                 height: 4.06.h,
               ),
             ),
-            Container(
+             Container(
               margin: EdgeInsets.only(top: 7.29, left: 4.73.w),
               width: 19.7.w,
               height: 3.h,
@@ -48,11 +49,11 @@ class HMTCard extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 3.2, left: 4.73.w),
-              width: 19.73.w,
+              width: 22.73.w,
               height: 1.88.h,
               decoration: BoxDecoration(),
               child: Text(
-                'Today Trips',
+                'Pickup Request',
                 style: TextStyle(
                   fontFamily: 'Manrope',
                   fontSize: 9.16.sp,
@@ -62,9 +63,9 @@ class HMTCard extends StatelessWidget {
                 ),
               ),
             ),
+
           ],
         ),
-        
         Positioned(
           top: 0.82.h,
           left: 23.6.w,
@@ -85,7 +86,7 @@ class HMTCard extends StatelessWidget {
                     decoration: BoxDecoration(
                       
                     ),
-                    child: Image.asset('assets/image/arrow.png'),
+                    child: Image.asset('assets/arrow.png'),
                   ),
                   
                 ],
@@ -93,7 +94,7 @@ class HMTCard extends StatelessWidget {
               
             ),
           ),
-          Positioned(
+           Positioned(
           top: 1.41.h,
           left: 30.52.w,
           child: Container(
@@ -113,8 +114,7 @@ class HMTCard extends StatelessWidget {
             ),
           ),
         ),
-        
-        Positioned(
+         Positioned(
           top: 1.41.h,
           left:32.5.w,
           child: Container(
@@ -134,8 +134,7 @@ class HMTCard extends StatelessWidget {
             ),
           ),
         ),
-        
-        Positioned(
+          Positioned(
           top: 1.41.h,
           left :35.35.w,
           
@@ -155,8 +154,7 @@ class HMTCard extends StatelessWidget {
             ),
           ),
         ),
-      ],
+  ],
     );
   }
 }
-    
