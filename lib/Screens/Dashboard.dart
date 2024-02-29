@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:greenwormsadminpanel/Screens/EventScreen/EventCreateScreen.dart';
 import 'package:greenwormsadminpanel/Screens/HomeScreen/Components/HMTcard.dart';
 import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupCreateScreen.dart';
@@ -28,6 +29,7 @@ class _DashboardState extends State<Dashboard> {
                   color:
                       (indexNum != 0) ? Color(0xff5E5F60) : Color(0xff036163),
                   height: 7.h,
+                  
                 ),
                 label: "Home",
               ),
@@ -41,11 +43,15 @@ class _DashboardState extends State<Dashboard> {
                 label: "Pickup",
               ),
               BottomNavigationBarItem(
-                icon: Image.asset(
-                  "assets/event.png",
-                  color:
-                      (indexNum != 2) ? Color(0xff5E5F60) : Color(0xff036163),
-                  height: 7.h,
+                icon: SizedBox(
+                  width: 6.5.w,
+                  height: 6.5.w,
+                  child: Image.asset(
+                    "assets/event.png",
+                    color:
+                        (indexNum != 2) ? Color(0xff5E5F60) : Color(0xff036163),
+                    height: 7.h,
+                  ),
                 ),
                 label: "Event",
               ),
@@ -73,6 +79,9 @@ class _DashboardState extends State<Dashboard> {
             showSelectedLabels: true,
             showUnselectedLabels: false,
             currentIndex: indexNum,
+           selectedLabelStyle: GoogleFonts.lexend(fontSize: 10.sp,fontWeight: FontWeight.w400,color: Color(0xff036163)),
+           
+            
             onTap: (int index) {
               setState(() {
                 indexNum = index;
