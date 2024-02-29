@@ -23,7 +23,7 @@ class InputwardCreateScreen extends StatelessWidget {
             
                
                  Padding(
-                   padding:  EdgeInsets.only(left:4.39.w,top:3.25.h ),
+                   padding:  EdgeInsets.only(left:4.39.w,top:6.h ),
                    child: Row(
                      children: [
                        IconButton(
@@ -68,7 +68,7 @@ class InputwardCreateScreen extends StatelessWidget {
               _textfield('Houses Not Interested'),
               _textfield('Houses With No Money'),
               _textfield('Houses Non-Cooperated'),
-             SizedBox(height:2.49.h),
+             SizedBox(height:3.h),
              InkWell(
               onTap: () {
                 Navigator.push(
@@ -90,17 +90,18 @@ class InputwardCreateScreen extends StatelessWidget {
                   style: GoogleFonts.lexend(
                       fontSize: 13.33.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFFFFFFFF)),
+                      color: Colors.white,
+),),
                 ),
               ),
 
-           
-
+           SizedBox(height: 5.h,),
+      
 
 
 
     
-        ),
+        
           ],
         ),
        ),
@@ -116,11 +117,11 @@ class InputwardCreateScreen extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Padding(
-        padding:  EdgeInsets.only(left: 5.w),
+        padding:  EdgeInsets.only(left: 7.w),
         child: Text(
           text,
           style:
-              GoogleFonts.lexend(fontSize: 11.66.sp, fontWeight: FontWeight.w500),
+              GoogleFonts.lexend(fontSize: 11.66.sp, fontWeight: FontWeight.w500,color:Color(0xff344054)),
         ),
       ),
       SizedBox(height: 0.89.h),
@@ -128,7 +129,7 @@ class InputwardCreateScreen extends StatelessWidget {
           alignment: Alignment.centerLeft,
           height: 4.94.h,
           width: 84.78.w,
-          margin: EdgeInsets.only(left:5.w),
+          margin: EdgeInsets.only(left:7.w),
           decoration: BoxDecoration(
             border: Border.all(color: Color(0xFFCBCBCB)),
             borderRadius: BorderRadius.circular(6),
@@ -152,11 +153,11 @@ _textfield(String text) {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Padding(
-        padding:  EdgeInsets.only(left:5.w),
+        padding:  EdgeInsets.only(left:7.w),
         child: Text(
           text,
           style:
-              GoogleFonts.lexend(fontSize: 11.66.sp, fontWeight: FontWeight.w500),
+              GoogleFonts.lexend(fontSize: 11.66.sp, fontWeight: FontWeight.w500,color:Color(0xff344054)),
         ),
       ),
       SizedBox(height: 0.89.h),
@@ -164,7 +165,7 @@ _textfield(String text) {
         alignment: Alignment.centerLeft,
         height: 4.94.h,
         width: 86.w,
-        margin: EdgeInsets.only(left: 5.w),
+        margin: EdgeInsets.only(left: 7.w),
         decoration: BoxDecoration(
           border: Border.all(color: Color(0xFFCBCBCB)),
           borderRadius: BorderRadius.circular(6),
