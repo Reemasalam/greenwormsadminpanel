@@ -7,6 +7,8 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:greenwormsadminpanel/Screens/Dashboard.dart';
 import 'package:greenwormsadminpanel/Screens/EventScreen/EventCreateScreen.dart';
+import 'package:greenwormsadminpanel/Screens/EventScreen/EventListScreen.dart';
+import 'package:greenwormsadminpanel/Screens/EventScreen/component/Eventcard.dart';
 
 import 'package:greenwormsadminpanel/Screens/HomeScreen/HomeScreen.dart';
 
