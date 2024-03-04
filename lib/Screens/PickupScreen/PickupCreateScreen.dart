@@ -327,10 +327,7 @@ class PickupCreateScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PickupListScreen()),
-                );
+                Navigator.pop(context);
               },
               child: Padding(
                 padding:  EdgeInsets.only(left:7.14.w),

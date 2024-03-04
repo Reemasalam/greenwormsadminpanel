@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:greenwormsadminpanel/Screens/EventScreen/EventListScreen.dart';
 import 'package:image_picker/image_picker.dart';
@@ -73,10 +74,8 @@ class EventCreateScreen extends StatelessWidget {
                  SizedBox(height: 3.h,),
              InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                 MaterialPageRoute(builder: (context) =>EventListScreen(),),
-               );
+               
+                Navigator.pop(context);
              },
              child: Container(
                 alignment: Alignment.center,

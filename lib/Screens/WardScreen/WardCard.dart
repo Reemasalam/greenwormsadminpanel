@@ -20,59 +20,72 @@ class WardCard extends StatelessWidget {
       ),
 
 
-      child: Column(
+      child: Row(
         children: [
-          
-            Row(
-              children: [
-                SizedBox(
-                  //width: .w,
-                  height:5.h,
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset("assets/team.png",
-                      height:3.5.h ,
-                      width: 3.5.h,),
+          Column(
+            children: [
+              
+                Row(
+                  children: [
+                    SizedBox(
+                      //width: .w,
+                      height:5.h,
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset("assets/team.png",
+                          height:3.5.h ,
+                          width: 3.5.h,),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                SizedBox( width: 1.21.w,),
-                Text("Team Name",
-                style: GoogleFonts.lexend(
-                      fontSize: 13.33.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-),),
-
-                
-
-
-
-                
-
-              ],
-            ),
-         //SizedBox(height: .5.h,),
-         
-         Align(
-          alignment: Alignment.centerLeft,
-           child: Padding(
-             padding: EdgeInsets.only(left: 12.w,),
-             child: Text("lsg name",
+                    SizedBox( width: 1.21.w,),
+                    Text("Team Name",
                     style: GoogleFonts.lexend(
-                          fontSize: 9.sp,
+                          fontSize: 13.33.sp,
                           fontWeight: FontWeight.w400,
                           color: Colors.black,
-             
-             ),
-             textAlign: TextAlign.left,
-             ),
-           ),
-         ),
+          ),),
           
+                    
+          
+          
+          
+                    
+          
+                  ],
+                ),
+             //SizedBox(height: .5.h,),
+             
+             Align(
+              alignment: Alignment.centerLeft,
+               child: Padding(
+                 padding: EdgeInsets.only(left: 12.w,),
+                 child: Text("lsg name",
+                        style: GoogleFonts.lexend(
+                              fontSize: 9.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black,
+                 
+                 ),
+                 textAlign: TextAlign.left,
+                 ),
+               ),
+             ),
+              
+          
+            ],
+          ),
+          Expanded(child: Container()),
 
+       Container(width: 6.w,
+    height: 6.w,
+    decoration: BoxDecoration(borderRadius: BorderRadius.circular(15.w),color: Color(0xffE6FAFD)),
+    child: Image.asset("assets/right.png"),),
+                   
+
+          SizedBox(width: 3.w,),
         ],
       ),
     );

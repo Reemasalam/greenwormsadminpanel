@@ -71,10 +71,8 @@ class InputwardCreateScreen extends StatelessWidget {
              SizedBox(height:3.h),
              InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                 MaterialPageRoute(builder: (context) => InputwardListScreen(),),
-               );
+               
+                Navigator.pop(context);
              },
              child: Container(
                 alignment: Alignment.center,
