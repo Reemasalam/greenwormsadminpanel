@@ -23,9 +23,11 @@ class _DashboardState extends State<Dashboard> {
 
    @override
   Widget build(BuildContext context) {
-    return  BottomNavigationBar(
-      
-         items: [
+    return  PreferredSize(
+      preferredSize: Size.fromHeight(2.h),
+    
+       child:BottomNavigationBar(
+           items: [
            BottomNavigationBarItem(
              icon: Image.asset(
                "assets/Home.png",
@@ -83,7 +85,7 @@ class _DashboardState extends State<Dashboard> {
              
            ),
          ],
-         iconSize: 5.w,
+                  iconSize: 5.w,
          selectedFontSize: 11.sp,
          showSelectedLabels: true,
          showUnselectedLabels: true,
@@ -94,11 +96,15 @@ class _DashboardState extends State<Dashboard> {
           unselectedItemColor: Color(0xff5E5F60),
           selectedLabelStyle: GoogleFonts.lexend(fontWeight: FontWeight.w400 ,fontSize: 10.sp),
            unselectedLabelStyle: GoogleFonts.lexend(fontWeight: FontWeight.w400,fontSize: 10.sp ),
-         onTap: (int index) {
-           setState(() {
-             indexNum = index;
-             
-           });
-         });
+      
+            
+            onTap: (int index) {
+              setState(() {
+                indexNum = index;
+              });
+            }),
+      
+        
+       );
   }
 }
