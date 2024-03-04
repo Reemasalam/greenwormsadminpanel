@@ -119,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                      //authCtrl.loginSend();
                   // }
                   // login button click
-                  Get.to(InputwardListScreen());
+                  Get.to(HomeScreen());
                 },
                 child: Container(
                   width: 84.2.w,

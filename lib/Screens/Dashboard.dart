@@ -9,6 +9,7 @@ import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupCreateScreen.dar
 import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupListScreen.dart';
 import 'package:greenwormsadminpanel/Screens/ProfileSCreen/ProfileScreen.dart';
 import 'package:greenwormsadminpanel/Screens/WardScreen/InputwardCreateScreen.dart';
+import 'package:greenwormsadminpanel/Screens/WardScreen/InputwardListScreen.dart';
 import 'package:sizer/sizer.dart';
 
 class Dashboard extends StatefulWidget {
@@ -37,16 +38,11 @@ class _DashboardState extends State<Dashboard> {
            
            ),
            BottomNavigationBarItem(
-             icon: InkWell(
-              onTap: () {
-                Get.to(()=>PickupListScreen());
-              },
-               child: Image.asset(
-                 "assets/pickup.png",
-                 height: 4.h,
-                 color:
-                     (indexNum != 1) ? Color(0xff5E5F60) : Color(0xff036163),
-               ),
+             icon: Image.asset(
+               "assets/pickup.png",
+               height: 4.h,
+               color:
+                   (indexNum != 1) ? Color(0xff5E5F60) : Color(0xff036163),
              ),
              label: "Pickup",
            ),
