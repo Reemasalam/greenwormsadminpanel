@@ -17,7 +17,7 @@ class HMTitle extends StatelessWidget {
           child: Container(
             margin: EdgeInsets.only(left: 3.w),
             child: Image.asset(
-              'assets/profile.png',
+              'assets/Profile.png',
               width: 40,
               height: 40,
               fit: BoxFit.cover,

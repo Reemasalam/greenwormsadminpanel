@@ -32,6 +32,7 @@ class _DashboardState extends State<Dashboard> {
                   
                 ),
                 label: "Home",
+              
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
@@ -77,10 +78,11 @@ class _DashboardState extends State<Dashboard> {
             iconSize: 50,
             selectedFontSize: 10,
             showSelectedLabels: true,
-            showUnselectedLabels: false,
+            showUnselectedLabels: true,
             currentIndex: indexNum,
            selectedLabelStyle: GoogleFonts.lexend(fontSize: 10.sp,fontWeight: FontWeight.w400,color: Color(0xff036163)),
-           
+           unselectedLabelStyle:GoogleFonts.lexend(fontSize: 10.sp,fontWeight: FontWeight.w400,color: Color(0xff036163)),
+        
             
             onTap: (int index) {
               setState(() {
