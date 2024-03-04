@@ -58,18 +58,18 @@ class EventCreateScreen extends StatelessWidget {
                   child: Image.asset('assets/upload.png')
                 ),SizedBox(height:2.6.h),
                // if(mctrl.materialimage!=null)
-                 Container(
-                  width: 78.w,
-                  height: 5.8.h,
-                //  color: Colors.amber,
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(left: 3.w),
-                  margin: EdgeInsets.only(
+                //  Container(
+                //   width: 78.w,
+                //   height: 5.8.h,
+                // //  color: Colors.amber,
+                //   alignment: Alignment.centerLeft,
+                //   padding: EdgeInsets.only(left: 3.w),
+                //   margin: EdgeInsets.only(
                     
-                    left: 10.w,
-                  ),
-                  child: Image.asset('assets/imageupload.png'),
-                ),
+                //     left: 10.w,
+                //   ),
+                //   child: Image.asset('assets/imageupload.png'),
+                // ),
                  SizedBox(height: 3.h,),
              InkWell(
               onTap: () {
