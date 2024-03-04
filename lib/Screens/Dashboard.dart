@@ -67,7 +67,7 @@ class _DashboardState extends State<Dashboard> {
               ),
                BottomNavigationBarItem(
                 icon: Image.asset(
-                  "assets/Profile.png",
+                  "assets/Profile1.png",
                   color:
                       (indexNum != 3) ? Color(0xff5E5F60) : Color(0xff036163),
                   height: 7.h,
@@ -78,11 +78,10 @@ class _DashboardState extends State<Dashboard> {
             iconSize: 50,
             selectedFontSize: 10,
             showSelectedLabels: true,
-            showUnselectedLabels: true,
+            showUnselectedLabels: false,
             currentIndex: indexNum,
            selectedLabelStyle: GoogleFonts.lexend(fontSize: 10.sp,fontWeight: FontWeight.w400,color: Color(0xff036163)),
-           unselectedLabelStyle:GoogleFonts.lexend(fontSize: 10.sp,fontWeight: FontWeight.w400,color: Color(0xff036163)),
-        
+           
             
             onTap: (int index) {
               setState(() {
