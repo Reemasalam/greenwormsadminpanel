@@ -52,14 +52,11 @@ class _DashboardState extends State<Dashboard> {
              icon: SizedBox(
                width: 6.5.w,
                height: 7.5.w,
-               child: InkWell(
-                onTap: () => Get.to(()=>EventListScreen()),
-                 child: Image.asset(
-                   "assets/event.png",
-                   color:
-                       (indexNum != 2) ? Color(0xff5E5F60) : Color(0xff036163),
-                   height: 4.h,
-                 ),
+               child: Image.asset(
+                 "assets/event.png",
+                 color:
+                     (indexNum != 2) ? Color(0xff5E5F60) : Color(0xff036163),
+                 height: 4.h,
                ),
              ),
              label: "Event",
