@@ -12,6 +12,7 @@ class InputwardListScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 2.h,),
           Expanded(
             child: SingleChildScrollView(
               child: Column(

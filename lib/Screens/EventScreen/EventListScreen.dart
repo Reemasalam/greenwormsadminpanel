@@ -11,8 +11,12 @@ class EventListScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-           Expanded(child: SingleChildScrollView(
-                    child:Column(children: [
+          SizedBox(height: 3.h,),
+           Expanded(
+            
+            child: SingleChildScrollView(
+                    child:Column(
+                      children: [
                       SizedBox(height: 5.h,),
                       EventCardScreen(),
                         SizedBox(height: 1.h,),
