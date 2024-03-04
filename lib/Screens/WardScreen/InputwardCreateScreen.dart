@@ -35,7 +35,7 @@ class InputwardCreateScreen extends StatelessWidget {
                                  },
                         
                        ),
-                       SizedBox(width:1.2.w),
+                      // SizedBox(width:1.2.w),
                         Text(
                       ' Create Input ward collection ',
                     

@@ -122,7 +122,7 @@ class LoginScreen extends StatelessWidget {
                      //authCtrl.loginSend();
                   // }
                   // login button click
-                  Get.to(()=>HomeScreen());
+                  Get.to(()=>Dashboard());
                 },
                 child: Container(
                   width: 84.2.w,

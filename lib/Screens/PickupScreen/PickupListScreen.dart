@@ -12,18 +12,26 @@ class PickupListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
+      body: Column(
+      
         
                 children: [   
-                   Expanded(child: SingleChildScrollView(
-                    child:Column(children: [
+                   Expanded(
+                    child: SingleChildScrollView(
+                    child:Column(
+                      children: [
                       SizedBox(height: 5.h,),
                       JobSheetCard(),
         
-          SizedBox(height: 2.h,),
+          SizedBox(height: 1.h,),
+                    ],
+                    ),
+                   ),
+                   ),
+                   Align(
+                    alignment:Alignment.bottomRight,
                          // Expanded(child: Container()),JobSheetCard(),
-              InkWell(
+               child:InkWell(
                 onTap: (){
                   Navigator.push(
                     context,
@@ -31,30 +39,18 @@ class PickupListScreen extends StatelessWidget {
                   );
                 },
               child: Padding(
-                padding:  EdgeInsets.only(top:71.h,left:75.w),
+                padding:  EdgeInsets.only(bottom: 20, right: 20),
                 child: Image.asset('assets/add.png',
                 width:6.7.h,
-                height:6.7.h,
+                height:6.7.h
                           ),
               ),
                           ),
-                        
-                          
-                          SizedBox(height: 1.h,),
-                    ],
-                    ),
                    ),
-                   ),
-                        
-                          Dashboard(),
-             ],
-                    ),
-      ),
-    
-
-    
-    );
+                ],
+        ),
+      );
   }
 }
-          
-    
+                          
+                       

@@ -11,7 +11,7 @@ class PickupCreateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: SafeArea(
         child: Column(
           
           crossAxisAlignment: CrossAxisAlignment.start,
