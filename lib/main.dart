@@ -5,10 +5,14 @@ import 'package:greenwormsadminpanel/Screens/LoginScreen/LoginScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
-void main()  {
-   //WidgetsFlutterBinding.ensureInitialized();
-  //SharedPreferences preferences =  SharedPreferences.getInstance();
-  //login = preferences.getString("LOGIN") ?? "";
+
+String baseUrl = "https://api.greenworms.alpha.logidots.com/api/";
+String login = "";
+
+void main() async {
+   await WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences preferences =  await SharedPreferences.getInstance();
+  login = preferences.getString("LOGIN") ?? "";
   runApp(Greenwormsadminpanel());
 }
 
@@ -19,8 +23,9 @@ class Greenwormsadminpanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context , Orientation ,DeviceType){
-    return GetMaterialApp(home:
-    LoginScreen(),);
+    return GetMaterialApp(
+       home: (login == "IN") ? Dashboard() : LoginScreen(),
+    );
   });
 }
 

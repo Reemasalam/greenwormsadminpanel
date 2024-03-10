@@ -112,16 +112,16 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: () {
-                   //if (authCtrl.emailController.text.isEmpty) {
-                     //Fluttertoast.showToast(msg: "Please enter mail id");
-                   //  return;
-                 //} else if (authCtrl.passwordController.text.isEmpty) {
-                  // Fluttertoast.showToast(msg: "Please enter your password");
-                    //return;
-                   //} else {
-                     //authCtrl.loginSend();
-                  // }
-                  // login button click
+                   if (authCtrl.emailController.text.isEmpty) {
+                     Fluttertoast.showToast(msg: "Please enter mail id");
+                     return;
+                 } else if (authCtrl.passwordController.text.isEmpty) {
+                   Fluttertoast.showToast(msg: "Please enter your password");
+                    return;
+                   } else {
+                     authCtrl.loginSend();
+                  }
+                // login button click
                   Get.to(()=>Dashboard());
                 },
                 child: Container(
