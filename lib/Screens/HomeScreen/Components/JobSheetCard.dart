@@ -3,12 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class JobSheetCard extends StatelessWidget {
-  const JobSheetCard({super.key});
+  var jdata;
+  JobSheetCard({super.key, required this.jdata});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 91.w,
+        width: 91.w,
         margin: EdgeInsets.symmetric(vertical: 2.5),
         decoration: BoxDecoration(
             border: Border.all(
@@ -16,10 +17,12 @@ class JobSheetCard extends StatelessWidget {
             ),
             color: Colors.white,
             borderRadius: BorderRadius.circular(0.9.h)),
-            child: Padding(padding: EdgeInsets.fromLTRB(6.17.w, 1.h, 0.w, 0.h),
-            child: Column(
-              children: [
-                 Align(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(6.17.w, 1.h, 0.w, 0.h),
+          child: Column(
+            children: [
+              if ((jdata["status"]["name"] != "completed"))
+                Align(
                   alignment: Alignment.topLeft,
                   child: Container(
                     width: 27.47.w,
@@ -55,10 +58,10 @@ class JobSheetCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                 SizedBox(
+              SizedBox(
                 height: 2.h,
               ),
-               Row(
+              Row(
                 children: [
                   SizedBox(
                       width: 1.7.h,
@@ -78,7 +81,7 @@ class JobSheetCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                "#1" ,   //jobData["id"].toString(),
+                    "#" + jdata["id"].toString(),
                     style: GoogleFonts.lexend(
                         fontSize: 11.sp,
                         fontWeight: FontWeight.w600,
@@ -119,7 +122,7 @@ class JobSheetCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                 "18-02-24", //  jobData["date"].toString(),
+                    jdata["date"].toString(),
                     textAlign: TextAlign.end,
                     style: GoogleFonts.lexend(
                         fontSize: 11.sp,
@@ -160,7 +163,7 @@ class JobSheetCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                   "mixed waste", //jobData["material_type"].toString(),
+                    jdata["material_type"].toString(),
                     style: GoogleFonts.lexend(
                         fontSize: 11.sp,
                         fontWeight: FontWeight.w600,
@@ -200,7 +203,7 @@ class JobSheetCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                  "1000kg", // jobData["weight"].toString(),
+                    jdata["weight"].toString(),
                     style: GoogleFonts.lexend(
                         fontSize: 11.sp,
                         fontWeight: FontWeight.w600,
@@ -247,7 +250,7 @@ class JobSheetCard extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-               "Logidots Technologies,Atomic Building \n Kazhakootam,Tvm", //  jobData["collection_point_data"]["name"].toString(),
+                  jdata["collection_point_data"]["name"].toString(),
                   textAlign: TextAlign.start,
                   style: GoogleFonts.lexend(
                       fontSize: 11.sp,
@@ -258,9 +261,8 @@ class JobSheetCard extends StatelessWidget {
               SizedBox(
                 height: 4.h,
               ),
-             
-            ],),)
-            
-    );
+            ],
+          ),
+        ));
   }
 }

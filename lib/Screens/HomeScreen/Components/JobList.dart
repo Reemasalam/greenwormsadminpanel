@@ -8,10 +8,11 @@ class JobListCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: SingleChildScrollView(
+        Expanded(
+            child: SingleChildScrollView(
           child: Column(
             children: [
-              JobSheetCard(),
+              //  JobSheetCard(),
             ],
           ),
         ))

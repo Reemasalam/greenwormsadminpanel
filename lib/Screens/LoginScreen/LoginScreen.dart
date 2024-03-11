@@ -12,7 +12,6 @@ import 'package:greenwormsadminpanel/Screens/EventScreen/component/Eventcard.dar
 
 import 'package:greenwormsadminpanel/Screens/HomeScreen/HomeScreen.dart';
 
-
 import 'package:greenwormsadminpanel/Screens/LoginScreen/Controller.dart';
 import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupCreateScreen.dart';
 import 'package:greenwormsadminpanel/Screens/PickupScreen/PickupListScreen.dart';
@@ -112,17 +111,17 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: () {
-                   if (authCtrl.emailController.text.isEmpty) {
-                     Fluttertoast.showToast(msg: "Please enter mail id");
-                     return;
-                 } else if (authCtrl.passwordController.text.isEmpty) {
-                   Fluttertoast.showToast(msg: "Please enter your password");
+                  if (authCtrl.emailController.text.isEmpty) {
+                    Fluttertoast.showToast(msg: "Please enter mail id");
                     return;
-                   } else {
-                     authCtrl.loginSend();
+                  } else if (authCtrl.passwordController.text.isEmpty) {
+                    Fluttertoast.showToast(msg: "Please enter your password");
+                    return;
+                  } else {
+                    authCtrl.loginSend();
                   }
-                // login button click
-                  Get.to(()=>Dashboard());
+                  // login button click
+                  //   Get.to(()=>Dashboard());
                 },
                 child: Container(
                   width: 84.2.w,
@@ -150,15 +149,13 @@ class LoginScreen extends StatelessWidget {
               width: 35.5.w,
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Text(
-                  "App Version v1",
+                child: Text("App Version v1",
                     style: GoogleFonts.lexend(
                       textStyle: TextStyle(
                           color: Color(0xff007C58),
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400),
-                    )
-                    ),
+                    )),
               ),
             ),
             SizedBox(height: 0.4.h)

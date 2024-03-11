@@ -12,9 +12,9 @@ import 'package:greenwormsadminpanel/main.dart';
 
 class LoginController extends GetxController {
   TextEditingController emailController =
-      TextEditingController(text: "sabari@test.com");
+      TextEditingController(text: "vrmm@logidots.com");
   TextEditingController passwordController =
-      TextEditingController(text: "Password123@");
+      TextEditingController(text: "Vishnu123@");
   bool loading = false;
 
   loginSend() async {
@@ -22,30 +22,32 @@ class LoginController extends GetxController {
     print(passwordController.text);
     loading = true;
     update();
-    final Response = await post(Uri.parse( baseUrl + "auth/login"), headers: {
+    final Response = await post(Uri.parse(baseUrl + "auth/login"), headers: {
       'contentType': 'application/json',
     }, body: {
       "PhoneOrEmail": emailController.text.trim(),
-     "password": passwordController.text.trim()
+      "password": passwordController.text.trim()
     });
 
     var data = json.decode(Response.body);
-
+    print(Response.statusCode);
     print(Response.body);
-
-    if (Response.statusCode == 201) {
+    print("working here");
+    if (Response.statusCode == 201 &&
+        data["user"]["user_type"] == "project_associate") {
       //Obtain shared preferences.
       loading = false;
       update();
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('token', data["tokens"]["accessToken"]);
-     prefs.setString('user', data['user']['name']);
+      prefs.setString('user', data['user']['name']);
       prefs.setInt('user_id', data['user']['id']);
       prefs.setString("LOGIN", "IN");
       Get.off(() => Dashboard());
     } else {
       Fluttertoast.showToast(
-        msg: data["message"],
+        msg: data["message"].toString().replaceAll(
+            "login sucessfull", "Please login as a project associate"),
       );
       loading = false;
       update();
