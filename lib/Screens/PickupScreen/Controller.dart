@@ -18,7 +18,9 @@ class PickupController extends GetxController {
   var SelectedTransportCoordinator;
   TextEditingController weightController = TextEditingController();
   TextEditingController DateTimePicker = TextEditingController();
-  bool loading = false;
+  bool loading = false; 
+
+
 
   createJob() async {
     loading = true;
@@ -125,3 +127,4 @@ class PickupController extends GetxController {
     loadCollectionPoints();
   }
 }
+

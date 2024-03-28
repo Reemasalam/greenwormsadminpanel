@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:greenwormsadminpanel/Screens/EventScreen/EventListScreen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sizer/sizer.dart';
 
-class EventCreateScreen extends StatelessWidget {
-  const EventCreateScreen({super.key});
+import 'component/Controller.dart';
 
+class EventCreateScreen extends StatelessWidget {
+   EventCreateScreen({super.key});
+   EventController ectrl = Get.put(EventController());
   @override
+  
   Widget build(BuildContext context) {
+    ectrl.SelectType = null;
+    ectrl.EventList =[];
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -113,6 +120,7 @@ class EventCreateScreen extends StatelessWidget {
   }
 }
  _textbox(String text) {
+     EventController ectrl = Get.put(EventController());
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -134,21 +142,27 @@ class EventCreateScreen extends StatelessWidget {
             border: Border.all(color: Color(0xFFCBCBCB)),
             borderRadius: BorderRadius.circular(6),
           ),
-          child: DropdownButton<String>(
+          child: DropdownButton(
               isExpanded: true,
+              value: ectrl.SelectType,
               underline: Container(),
-              items: ["Type 1", "Type 2", "Type 3", "Type 4"]
-                  .map((e) => DropdownMenuItem<String>(
-                        child: Text(e),
-                        value: e,
+              items:ectrl.EventList
+                  .map((e) => DropdownMenuItem(
+                    value: e,
+                        child: Text(e["organized_by"])
+                        
                       ))
                   .toList(),
-              onChanged: (value) {}),),
+              onChanged: (value) {
+                ectrl.SelectType = value;
+                ectrl.update();
+              }),),
               SizedBox(height: 1.68.h),
     ],
   );
 }
 _textfield(String text) {
+     EventController ectrl = Get.put(EventController());
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
